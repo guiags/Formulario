@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário Dev-Web</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="/fonts/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
+  <link rel="stylesheet" href="/fonts/fontawesome-free-5.15.4-web/css/solid.min.css">
+  <link rel='stylesheet' href='/css/estilo.css' />
+</head>
+<body>
+
+  <header>
+    <div class="container">
+        <img id="logotipo" src="img/LOGO_CADASTRO_UNICO-removebg-preview.png" alt="logo_cadUnico">
+    </div>
+
+    <div class="container">
+        <div class="row" id="div_navbar">
+            <nav id="menu" class ="float-right">
+                <ul>
+                    <li class="search" style="position: absolute; top: 30px; left: -150px;">
+                      <button><a href="http://localhost:3000/show" class="btn btn-secondary" tabindex="-1" role="button">Cadastros</a></button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container" id="formulario">
+        <div id="sessao_form" style="width: 700px; height: 600px; position: absolute; top: 130px;">
+            <form action="/show" method="POST" style="margin-left: 50px; width: 600px;">
+                <div style="color:cadetblue; position: relative; width: 600px; border: 0; padding: 0; margin:0; text-align: left;">
+                    <br>
+                    <h2>Cadastro de Pessoa</h2>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label for="exampleInputName" class="form-label">Nome</label>
+                    <input type="text" name="name" class="form-control" id="exampleInputName" placeholder="Insira o Nome..." style="width: 600px" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputCPF" class="form-label">CPF</label>
+                    <input type="text" name="CPF" class="form-control" id="exampleInputCPF" placeholder="Insira o CPF..."  style="width: 600px" required>
+                </div>
+              
+                <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">E-mail</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Insira o E-mail..." aria-describedby="emailHelp" style="width: 600px">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputCEP" class="form-label">CEP</label>
+                    <input type="text" name="CEP" class="form-control" id="exampleInputCEP" placeholder="Insira o CEP..." style="width: 600px">
+                </div>
+
+                <div class="mb-3">
+                  <label for="exampleInputAdress" class="form-label">Endereço</label>
+                  <input type="text" name="endereco" class="form-control" id="exampleInputAdress" placeholder="Insira o Endereço Completo..." style="width: 600px" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleInputPhone" class="form-label">Telefone</label>
+                    <input type="text" name="telefone" class="form-control" id="exampleInputPhone" placeholder="Insira o Telefone para Contato..." style="width: 600px">
+                </div>
+
+                <div class="mb-3">
+                  <label for="nascimento" class="form-label">Data de Nascimento</label><br>
+                  <input type="date" name="nascimento" id="nascimento" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                        <label>Sexo</label><br>
+                        <input type="radio" name="Masculino" id="masculino">
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" name="Feminino" id="feminino">
+                        <label for="feminino">Feminino</label>
+                </div>
+                
+                <div class="mb-3 form-check">
+                  <input type="checkbox" name="veracidade" class="form-check-input" id="exampleCheck1" required>
+                  <label class="form-check-label" for="exampleCheck1">As informações apresentadas nesse cadastro são verídicas.</label>
+                </div>
+
+                <button type="enviar" class="btn btn-outline-primary">Enviar</button>
+                <a href="#" class="btn btn-outline-secondary" tabindex="-1" role="button">Novo</a>
+            </form>
+            
+        </div>
+</section>
+
+    <!--<h2 style="color: blue;">Cadastro de Pessoas<h2>
+    <form action="/show" method="POST">
+        <input type="text" placeholder="Nome" name="name">
+        <input type="text" placeholder="Sobrenome" name="surname">
+        <button type="submit">Submit</button>
+    </form> -->
+
+</body>
+</html>

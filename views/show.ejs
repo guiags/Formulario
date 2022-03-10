@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastros Realizados</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="/fonts/fontawesome-free-5.15.4-web/css/fontawesome.min.css">
+  <link rel="stylesheet" href="/fonts/fontawesome-free-5.15.4-web/css/solid.min.css">
+  <link rel='stylesheet' href='/css/estilo.css' />
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img id="logotipo" src="img/LOGO_CADASTRO_UNICO-removebg-preview.png" alt="logo_cadUnico">
+        </div>
+    
+        <div class="container">
+            <div class="row" id="div_navbar">
+                <nav id="menu" class ="float-right">
+                    <ul>
+                        <li class="search" style="position: absolute; top: 30px; left: -150px;">
+                          <button><a href="http://localhost:3000/" class="btn btn-secondary" tabindex="-1" role="button">Voltar</a></button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div style="color:cadetblue; position: relative; width: 600px; border: 0; padding: 0; margin:0; text-align: left;">
+        <br>
+        <h2>Registros</h2>
+    </div>
+    <table border="1">
+        <thead>
+            <tr style="width: 100%;">
+                <td>Nome</td>
+                <td>CPF</td>
+                <td>E-mail</td>
+                <td>CEP</td>
+                <td>Endereço</td>
+                <td>Telefone</td>
+                <td>Data Nascimento</td>
+                <td>Masculino</td>
+                <td>Feminino</td>
+
+            </tr>
+        </thead>
+        <tbody>
+        <% data.forEach(function(details) { %>
+            <tr style="width: 100%;">
+                <td><%= details.name %></td>
+                <td><%= details.CPF %></td>
+                <td><%= details.email %></td>
+                <td><%= details.CEP %></td>
+                <td><%= details.endereco %></td>
+                <td><%= details.telefone %></td>
+                <td><%= details.nascimento %></td>
+                <td><%= details.Masculino %></td>
+                <td><%= details.Feminino %></td>
+            </tr>
+            <% }) %>
+        </tbody>
+
+</body>
+</html>
